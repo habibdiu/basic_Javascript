@@ -43,15 +43,31 @@ else if(payment_amount>total_price){
 
 //const txt_msg = "Learn Document.getElement By ID";
 let payment = 1000;
+const fee1="Full paid", fee2 = "Not paid yet";
 
 if(payment==9000){
-    document.getElementById("txt_msg").innerHTML="Paid";
+    document.getElementById("txt_msg").innerHTML=fee1;
 }
 else{
-    document.getElementById("txt_msg").innerHTML = "Not paid"
+    document.getElementById("txt_msg").innerHTML = fee2;
 }
 
 //Stying with rgb ex1: rgb(145,255,255)/ rgb(10%,20%,100%)
 //Sizing in html selector ( 1inc/ 6pc(pcas)/ 72pt(points)/ 96px(pixel) )
 //Margin in html ( margin: 5px 3px 5px 3px); top right bottom left (Clockwise)
 
+//Array in Javascript
+var persons = [
+    "Habib",
+    "Shahid",
+    "Jaman",
+    "Nasir",
+    "Fazlu",
+    "Karim",
+    "Mohin"
+];
+let new_persons="";
+persons.forEach((person)=>{
+    new_persons+=person+"<br>";
+    document.getElementById("txt_msg").innerHTML= new_persons;
+});
