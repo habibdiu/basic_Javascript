@@ -28,7 +28,7 @@ let total_price, payment_amount, due_amount;
 
 total_price = (product_price*product_qty);
 
-payment_amount = 300;
+payment_amount = 30;
 
 if(payment_amount == total_price){
     console.log("Thanks for making your full payment!");
@@ -71,3 +71,48 @@ persons.forEach((person)=>{
     new_persons+=person+"<br>";
     document.getElementById("txt_msg").innerHTML= new_persons;
 });
+
+let course_plan = {
+    "PHP" : "$20",
+    "OOP" : "$3",
+    "Java" : "$13",
+    "Javascript" : "$8",
+    "Full-Stack" : "$25",
+    "Webdesign" : "$6",
+    "All Package": "$65"
+}
+
+document.getElementById("demo_msg").innerHTML=  " course Idea: "+(course_plan.Java);
+var value_1 = document.getElementById("demo_id");
+value_1.innerHTML = "Changed";
+
+var value_2 = document.getElementById("demo_id2");
+value_2.style.border = "2px solid rgb(83 0 47)";
+
+var value_3 = document.getElementById("demo_id3").style.color="red";
+
+//DOM Document(get value by class name)
+const dom_vlaue1 = document.getElementsByClassName("dom_elemets color");
+dom_vlaue1[0].innerHTML =  "DOM Elemets is changed from js file.";
+
+const dom_vlaue2 = document.getElementsByClassName("dom_elemets");
+dom_vlaue2[1].style.backgroundColor = "red";
+
+var elements_by_name = document.getElementsByName("name");
+document.getElementById("demo_name").innerHTML= elements_by_name[0].tagName;
+
+var elements_by_name1 = document.getElementsByName("age").length;
+document.getElementById("demo_age").innerHTML = elements_by_name1;
+
+var list = document.getElementsByTagName("li");
+document.getElementById("demo_unorder_list").innerHTML = list[0].innerHTML;
+
+
+var all_tag = document.getElementsByTagName("*");
+let name_of_all_tags = "";
+for(let i = 0; i<(all_tag.length);i++){
+    name_of_all_tags += all_tag[i].tagName  +"<br>";
+}
+document.getElementById("all_tags").innerHTML = name_of_all_tags;
+
+document.querySelector("p").style.backgroundColor="red";
