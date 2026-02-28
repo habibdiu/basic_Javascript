@@ -1,0 +1,16 @@
+.calculator_body{
+    background: #b28f8f;
+}
+.calculator_div{
+    text-align: center;
+    margin: 20vh;
+}
+#calculator_title{
+    text-align: center;
+}
+#sign_button{
+    margin-top: 20px;
+}
+#sign_button Button{
+    margin-right: 30px;
+}

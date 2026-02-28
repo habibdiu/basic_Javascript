@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<div class="calculator_div">
+    <h3 id="calculator_title">Calculator</h3><br>
+    <form action="">
+        <label for="first_number">Value 1:</label>
+        <input type="number" id="first_number" placeholder="ex: 12XXX"><br><br>
+        <label for="second_number">Value 2:</label>
+        <input type="number" id="second_number" placeholder="ex: 123XX">
+    </form>
+    <div id="sign_button">
+        <Button id="add_button" onclick="get_calculator()">+</Button>
+        <Button id="subtract_button" onclick="get_calculator()">-</Button>
+        <Button id="multiplicate_button" onclick="get_calculator()">*</Button>
+        <Button id="division_button" onclick="get_calculator()">/</Button>
+        <p id="calculation_result"></p>
+    </div>
+</div>
+
+<script src="/js/function.js"></script>
+</body>
+</html>
