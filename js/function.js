@@ -3,13 +3,29 @@
 // }
 
 function get_address(){
-    let user_address = " ";
-    user_address = document.getElementById("city_name").value;
-    if(user_address==""){
-        alert("Please enter address in the form first");
+    let city_name = "";
+    let person_name = "";
+    let ssc_roll = "";
+    let marks = "";
+
+    city_name = document.getElementById("city_name").value;
+    person_name = document.getElementById("person_name").value;
+    ssc_roll = document.getElementById("ssc_roll").value;
+    marks = document.getElementById("result_in_grade").innerHTML;
+
+    if( person_name=="" || marks==""|| ssc_roll==""){
+        if(marks==""){
+            alert("Please enter the value for: Marks");
+        }
+        else if(person_name==""){
+            alert("Please enter the value for: Person Name");
+        }
+        else if(ssc_roll==""){
+            alert("Please enter the value for: SSC Roll");
+        }
     }
     else{
-        alert(user_address);
+        alert("Name: "+person_name+ "\nLiving: "+city_name+"\nSSS Info: "+ssc_roll+"\nGrade: "+marks);
     }
 }
 
