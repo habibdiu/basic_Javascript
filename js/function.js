@@ -63,6 +63,17 @@ function set_color(){
     document.getElementById("set_color").style.color="green";
 }
 
+function change_effect(){
+    var ssc_roll= "";
+    ssc_roll = document.getElementById("ssc_roll").value;
+    if(ssc_roll>=1000 && ssc_roll<=8000){
+        document.getElementById("ssc_roll").style.color="red";
+    }
+    else if(ssc_roll>8000 && ssc_roll<=10000){
+        document.getElementById("ssc_roll").style.color="green";
+    }
+}
+
 function get_calculator(){
     let value1 = "", value2 = "", add_button="", subtract_button="", multiplicate_button="",division_button="";
     value1 = parseInt(document.getElementById("first_number").value);
