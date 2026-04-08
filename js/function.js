@@ -33,7 +33,7 @@ function get_grade(){
     let result= "";
     result = document.getElementById("marks").value;
     
-    if(result<=32){
+    if(result>=0 && result<=32){
         document.getElementById("result_in_grade").innerHTML="Fail";
     }
     else if(result>32 && result<=39){
@@ -48,12 +48,19 @@ function get_grade(){
     else if(result>59 && result<=69){
         document.getElementById("result_in_grade").innerHTML="A-";
     }
-    else if(result>70 && result<=79){
+    else if(result>69 && result<=79){
         document.getElementById.innerHTML="A";
     }
     else if(result>79 && result<=100){
         document.getElementById("result_in_grade").innerHTML="A+";
     }
+    else{
+        document.getElementById("result_in_grade").innerHTML="please_enter_valid_number!";
+    }
+}
+
+function set_color(){
+    document.getElementById("set_color").style.color="green";
 }
 
 function get_calculator(){
